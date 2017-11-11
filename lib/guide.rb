@@ -58,12 +58,10 @@ class Guide
       find(keyword)
     when 'add'
       add
-    when 'delete'
-      delete
     when 'quit'
       :quit
     else
-      puts "\nI don't know that command. lease choose \"list\", \"add\", \"find\", \"delete\", or \"quit\".\n\n"
+      puts "\nI don't know that command. lease choose \"list\", \"add\", \"find\", or \"quit\".\n\n"
     end
   end
 
@@ -102,14 +100,6 @@ class Guide
     puts "Sort using: 'list (cuisine, name, or price)'"
   end
 
-  def delete(restaurant_name)
-    # check if name was provided, if not, ask for name
-    # gather the name
-    # make an array of all restaurants
-    # remove the name, it's cuisine, and it's price from array
-    # overwrite the old file with new array
-    output_action_header("#{restaurant_name}.capitalize was deleted")
-  end
 
   def find(keyword="")
     output_action_header("Find a restaurant")
